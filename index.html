@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Que é INata</title>
+  <link rel="icon" href="alien.png" type="image/png">
+  
+  <style>
+    /* Reset básico e tipografia */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
+      color: #222;
+      background-color: #fafafa;
+      line-height: 1.7;
+      padding: 40px 20px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    /* Navegação Principal */
+    .nav-tabs {
+      display: flex;
+      gap: 20px;
+      border-bottom: 1px solid #e1e1e1;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      font-size: 0.95rem;
+      color: #777;
+      padding-bottom: 8px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: #111;
+    }
+
+    .tab-btn.active {
+      color: #111;
+      border-bottom: 2px solid #111;
+      font-weight: 500;
+    }
+
+    /* Sub-navegação (Alas) */
+    .subnav-tabs {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .subtab-btn {
+      background: none;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .subtab-btn.active {
+      border-color: #111;
+      color: #111;
+      font-weight: 500;
+    }
+
+    /* Conteúdos */
+    .tab-content, .subtab-content {
+      display: none;
+    }
+
+    .tab-content.active, .subtab-content.active {
+      display: block;
+    }
+
+    /* Caixa de Ideia Minimalista */
+    .idea-box {
+      border-left: 2px solid #111;
+      padding-left: 16px;
+      margin-bottom: 40px;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Estilização Literária */
+    article h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    article h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    article p {
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .poem-verse {
+      white-space: pre-line;
+      color: #333;
+    }
+
+    /* Seção de Artes */
+    .art-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .art-card {
+      border: 1px solid #eee;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .art-placeholder {
+      width: 100%;
+      height: 180px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .art-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <p class="subtitle">Olá meu nome é Isaac Natanael, me chame de INata.</p>
+  </header>
+
+  <!-- Navegação Principal -->
+  <nav class="nav-tabs">
+    <button class="tab-btn active" onclick="openTab('atualizações', this)">ATUALIZAÇÕES!</button>
+    <button class="tab-btn active" onclick="openTab('textos', this)">Textos</button>
+    <button class="tab-btn" onclick="openTab('artes', this)">Artes plásticas</button>
+    <button class="tab-btn" onclick="openTab('aba3', this)">Ideias com menos forma</button>
+  </nav>
+
+  <div id="atualizações" class="tab-content active">
+    <article>
+      <h3>09.2026</h3>
+      <p>Criação do site!</p>
+      <p>texos adicionados: Primeiros textos do Imortal.</p>
+    </article>
+  </div>
+  <!-- ABA 1: TEXTOS -->
+  <div id="textos" class="tab-content">
+    
+    <div class="subnav-tabs">
+      <button class="subtab-btn" onclick="openSubTab('imortal', this)">O Imortal</button>
+      <button class="subtab-btn" onclick="openSubTab('Inferno', this)">As Comédias Infernais de Satan Ael</button>
+    </div>
+
+    <!-- SUB-ABA: O IMORTAL -->
+    <div id="imortal" class="subtab-content active">
+      
+      <div class="idea-box">
+        <p>se alguém não pode morrer, mesmo de que de forma poetica, não pode deixar o passado pra trás, não pode recomeçar.</p>
+       
+      </div>
+
+      <article>
+        <h2>O imortal</h2>
+
+        <h3>Mensagem</h3>
+        <p>Eu sou imortal, eu nunca morro e meu corpo não sangra. Descobri quando você morreu e foi enterrada. Eu fui enterrado naquele dia também, mas estou aqui, eu não morri. Ou devo ter descoberto quando me arrancaram o coração do peito e não houve sangue, eu continuei lá em pé, eu não morri. E já me arrancaram o coração muitas vezes depois que você se foi. Alguns levaram, outros seguraram um pouco apreciando talvez, mas teve alguns que só queriam arrancá-lo mesmo, é o que eu penso, por que foram embora depois disso.</p>
+        
+        <p>Tem tanta coisa que eu preciso te dizer, tanta coisa que eu nunca direi. Você morreu, descansou. Eu não morro, não descanso. Será que dá pra renascer sem morrer? Já vi muita gente falando sobre “a magia do renascimento”, se permitir morrer um pouco para continuar vivendo, mas como eu já disse e você nunca saberá, eu não morro. Será que existe uma fênix que é assim também? eu acho que não.</p>
+
+        <p>Já pensei em me matar, te encontrar, mas tenho medo de não conseguir, descobrir que eu realmente não morro. Seria muito vergonhoso explicar o que eu tentei fazer. É uma vergonha morrer.</p>
+
+        <p>Mas e você? Sente vergonha? Deve sentir alívio. Eu sentiria.</p>
+
+        <p>Esse texto não era pra ser isso, mas é o que eu sou, dor que não acaba. Será que eu saberia que parte de minha pele está aberta? Será que se eu sangrasse alguém viria limpar meu sangue? Com certeza viria alguém. Não suportariam o cheiro do sangue.</p>
+
+        <h3>39</h3>
+        <p class="poem-verse">Eu não sangro
+E se eu sangrasse?
+Você me limparia?
+
+Use gazes para enxugar
+Se você enxergar meu sangue
+Deixe-as dentro de mim
+Que meu pus vai sair
+
+Você prefere isso
+
+Me limpe, eu estou sangrando
+Você não gosta disso, então me limpe
+“Não sei do que você está falando, você está bem”
+
+Devo estar mesmo</p>
+
+        <h3>Volta</h3>
+        <p>Eu sempre volto. Vou ao fundo do poço depois ao topo da montanha em meia hora, e volto. Choro o meu peso, mas volto. Pra casa, pra escola, pra você, pra montanha, pro poço, pra dúvida.</p>
+
+        <p>“Quanto mais tiro de mim”. Eu vou voltar mesmo que eu diga que não, porque eu tenho bom coração e porque eu sou idiota. “diz pra mim”, você nunca fala comigo. ”diz pra mim que a gente vai voltar a se ver”. Fala a verdade, a gente já se viu? você nunca quis me ver e nunca vai ver quem eu sou de verdade. Você nunca vai se mostrar tudo que é pra mim. Mas vou voltar.</p>
+
+        <p>Já fiz tanto pra enterrar. Já te matei tantas vezes na minha cabeça. E sou eu quem volta. eu sempre penso em você.</p>
+
+        <h3>Rei</h3>
+        <p>Obá ô, mojubá, mas o senhor disse que eu ia ser rei, e estou sendo rei apenas de meus demônios. O senhor já me explicou mas permita que eu sofra por isso, “Como seres humanos reais e nada mais”.</p>
+
+        <h3>Fim</h3>
+        <p class="poem-verse">E é o fim
+pelo menos pra mim
+não que vá tudo acabar agora
+pra umas sim é a hora
+mas inda vou continuar
+o amanhã vai chegar
+bom ou ruim
+também terá fim
+
+e mesmo que eu não tenha
+mesmo que algo me mantenha
+por hoje deu
+só quero pensar que sou seu</p>
+
+        <h3>A Deus</h3>
+        <p>Eu vou fuder com tudo, eu vou chutar a porra do balde. sempre dizem que foi deus que colocou o adeus na boca de que eu amei e eu não want mais isso. vou aniquilar tudo em mim que me impede de continuar. vão falar que foi Deus, mas se foi foi so permissão, fui eu. se tem que ter um vou ser eu o vilão. serei minha propria desgraça e acharei graça quando algo que eu fizer der certo.</p>
+
+        <h3>Inundo</h3>
+        <p>Tem muito, tá transbordando. escorrendo e não para, continua caindo. mas eu não sangro, eu não morro. mas eu choro, e meu choro cai, inunda meu entorno. não sei beber pouco, só em excesso. e não derramo pouco, sou excessivo. se eu falar porque eu choro. mas não consigo não falar, então sempre inundo, não sei medir.</p>
+      </article>
+
+    </div>
+
+    <!-- SUB-ABA: OUTROS TEXTOS -->
+    <div id="Inferno" class="subtab-content">
+      <div class="idea-box">dante teve seu inferno e eu quis o meu também.</div>
+      
+      <article>
+      <h2>As Comédias Infernais de Satan Ael</h2>
+      <h3>Prólogo</h3>
+      <p>Eis que em um dos ciclos da existência, pairou Ninguém sobre Satan Ael, um dos príncipes do inferno e imperador de uma das províncias desse plano. </p>
+	
+      <p>“De onde vens?”, perguntou o príncipe.</p>
+	
+      <p>“De passear e pairar pelo abismo, sofrendo com as almas que nele estão”.</p>
+	
+      <p>O príncipe, como o entusiasta das diplomacias astrais e da existência dos seres limitados de consciência, questionou sobre que histórias Ninguém havia apurado em suas peregrinações. Dessa forma, Ninguém lhe contou tudo o que já tinha visto em seu caminho até ali.</p>
+	
+      <p>O relato original não poderia ser contido em nenhum livro, tanto por que o relato de uma entidade além do tempo é aproximado ao infinito mas também por que o registro é incompreensível para seres humanos, o que faz com que muitas expressões tenham sido perdidas.</p>
+	
+      <p>Os textos a seguir são os ditos “Comédias Infernais de Satan Ael” por se tratarem das principais histórias da província do príncipe, dessa maneira, os textos além de narrativas, são registros cartográficos e sociais daquele lugar. No inferno eles tem a missão de divertir os sátiros que vêm humor nessas histórias trágicas.</p>
+	
+      <p>A primeira e a ultima história podem ser facilmente adaptadas aos teatros humanos, apesar de que todas sejam reproduzidas nos teatros infernais. Além disso, cada história tem sua singularidade, que está mais relativa ao tempo, pois outros planos tem leis temporais diferentes, o que faz com que coisas vistas como anômalas por nós seres de três dimensões ocorram. A primeira, por exemplo, ocorre em um tipo de laço temporal, onde duas histórias acontecem separadas, mas se entrelaçam e ocorrem juntas, as três histórias ocorrem simultaneamente em repetição pela eternidade. A terceira história tem eternidades dentro dela, da mesma forma que entre 0 e 1 existem infinitos números.</p>
+  
+       <p>Tudo isso foi revelado a mim, mago Carlos Eduardo, por uma das encarnações do próprio ninguém, que veio na forma de uma pessoas adolescente.</p>
+        <p>Contudo aqui algumas coisas precisam ser explicadas, as entidades envolvidas na história. Ninguém é uma entidade cósmica que existe desde os primódios do tempo. Nínguem é tudo e todos são Ninguém. Pode se apresentar de diferentes formas e em diferentes avatares. Nunca tem um objetivo específico. Quanto aos outros personagens, todos são almas humanas que foram ao inferno, já que os sátiros se contentavam em apenas observar os sofrimentos das almas do abismo. Todos os personagens das comédias são almas humanas, com exessão de dois: Alerquim, que é algo mais compplexo que isso, e o próprio Deus.</p>
+
+      </article>
+    </div>
+
+  </div>
+
+  <!-- ABA 2: ARTES PLÁSTICAS -->
+  <div id="artes" class="tab-content">
+    
+    <div class="subnav-tabs">
+      <button class="subtab-btn active" onclick="openSubTab('pinturas', this)">Pinturas</button>
+      <button class="subtab-btn" onclick="openSubTab('autocolantes', this)">Autocolantes</button>
+    </div>
+
+    <!-- ALA: PINTURAS -->
+    <div id="pinturas" class="subtab-content active">
+      <div class="art-grid">
+        <div class="art-card">
+          <div class="art-placeholder">[ Imagem da Pintura ]</div>
+          <div class="art-title">Sem título I</div>
+        </div>
+        <div class="art-card">
+          <div class="art-placeholder">[ Imagem da Pintura ]</div>
+          <div class="art-title">Sem título II</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALA: AUTOCOLANTES -->
+    <div id="autocolantes" class="subtab-content">
+      <div class="art-grid">
+        <div class="art-card">
+          <div class="art-placeholder">[ Autocolante ]</div>
+          <div class="art-title">Série Urbanos I</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ABA 3: IDEIAS COM MENOS FORMA -->
+  <div id="aba3" class="tab-content">
+
+    <div class="subnav-tabs">
+      <button class="subtab-btn active" onclick="openSubTab('palhaço', this)">Palhaço</button>
+      <button class="subtab-btn" onclick="openSubTab('Teremim', this)">Teremim</button>
+      <button class="subtab-btn" onclick="openSubTab('Alerquim', this)">Alerquim</button>
+    </div>
+
+    <div id="palhaço" class="subtab-content active">
+      <article>
+      <p>Quando fui de palhaço pela primeira vez a escola eu tive uma certeza, precisava escrever sobre isso.</p>
+      <p></p>
+      </article>
+    </div>
+
+    <div id="Teremim" class="subtab-content">
+      <article>
+      <p>Essa historia teve muitas formas. Começou nas Comédias Infernais, não que tenha saído do universo, mas agora é sobre Teremim, que quer ter alguém além de si mesmo. Apesar de não saber exatamente em qual suporte essa história se apresentara primeiro, tenho muito carinho por essa história.</p>
+      </article>
+    </div>
+
+    <div id="Alerquim" class="subtab-content">
+      <article>
+      <p>A continuação da história de teremim, mesmo que a dele ainda não esteja de todo terminada.</p>
+      </article>
+    </div>
+
+  </div>
+
+  <footer>
+    INata &copy; 2026
+  </footer>
+
+  <script>
+    function openTab(tabId, btn) {
+      // Esconde todas as abas principais
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Desativa os botões principais
+      const buttons = document.querySelectorAll('.nav-tabs .tab-btn');
+      buttons.forEach(button => button.classList.remove('active'));
+
+      // Ativa a aba e botão clicado
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function openSubTab(subTabId, btn) {
+      // Procura as sub-abas do contêiner ativo
+      const activeParent = btn.closest('.tab-content');
+      const subContents = activeParent.querySelectorAll('.subtab-content');
+      subContents.forEach(content => content.classList.remove('active'));
+
+      // Desativa botões da sub-navegação ativa
+      const subButtons = activeParent.querySelectorAll('.subnav-tabs .subtab-btn');
+      subButtons.forEach(button => button.classList.remove('active'));
+
+      // Ativa a sub-aba e o botão selecionado
+      document.getElementById(subTabId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
